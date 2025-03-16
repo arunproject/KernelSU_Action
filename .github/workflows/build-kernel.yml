@@ -191,7 +191,7 @@ jobs:
 
     - name: temporarily fix 
       run: |
-        $GITHUB_WORKSPACE/kernel_workspace/scripts/config --file arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }} -d CONFIG_CC_STACKPROTECTOR_STRONG
+        $GITHUB_WORKSPACE/kernel_workspace/android-kernel/scripts/config --file arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }} -d CONFIG_CC_STACKPROTECTOR_STRONG
 
     - name: Download source boot image
       if: env.BUILD_BOOT_IMG == 'true'
